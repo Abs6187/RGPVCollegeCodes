@@ -1,0 +1,124 @@
+/*WAP to perform the following operations on strings using string functions:-
+1.Length of String 2. Reversing the String 3.Compairing the String
+4. Copying one string into another 5. Concatenating 2 strings 
+*/
+Theory:-
+i) String:-A String in C programming is a sequence of characters terminated with a null character '\0'. The C String is stored as an array of characters. The difference between a character array and a C string is the string is terminated with a unique character '\0'.
+ii)string.h:- string.h is a standard header file in the C language that contains functions for manipulating strings (arrays of characters). <string.h> header file contains some useful string functions that can be directly used in a program by invoking the #include preprocessor directive.
+iii)C has many string functions, which can be used to perform certain operations on strings.Some of them are as follows:-
+	a) The strlen() function returns the length of a function.
+	b) The strrev() function is used to reverse the given string.
+	c) The strcmp() function is used to compare the string arguments.This function returns the following three different values based on the comparison.
+		1.Zero(0) − It returns zero if both strings are identical. All characters are same in both strings.
+		2. 2.Greater than zero(>0) − It returns a value greater than zero when the matching character of left string has greater ASCII value than the character 		of the right string.
+		3.Less than zero(<0) − It returns a value less than zero when the matching character of left string has lesser ASCII value than the character of the 			right string.
+	d) strcpy() is the string copy function. It copies one string into another string.
+	e) strcat() is the string concatenate function. It concatenates strings.
+Code:-
+#include <string.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+void Length_of_String();
+void Reverse();
+void Comparision();
+void Copying();
+void Concatenation();
+void main()
+{
+ int i,choice;
+ char ch;
+ clrscr();
+ do
+ {
+  clrscr();
+  printf("\nEnter your choice:\n1.Length_of_String \n2.Reversing the String \n3.Comparision of two String \n4.Copying String 'A' to 'B' \n5.Concatenating string 'A' and 'B'\n");
+  fflush(stdin);
+  scanf("%d",&choice);
+  switch(choice)
+  {
+	case 1:
+		Length_of_String();
+		break;
+	case 2:
+		Reverse();
+		break;
+	case 3:
+		Comparision();
+		break;
+	case 4:
+		Copying();
+		break;
+	case 5:
+		Concatenation();
+		break;
+	default:
+		printf("\nWrong Choice\n");
+  }
+  printf("\nDo you want to continue, Press Y/N");
+  fflush(stdin);
+  scanf("%c",&ch);
+ }while(ch=='Y'||ch=='y');
+ getch();
+}
+void Length_of_String()
+{
+ int i;
+ char a[10];
+ printf("Enter the string whose length you want to find\n");
+ fflush(stdin);
+ scanf("%s",&a);
+ i=strlen(a);
+ printf("Length of String %s is %d\n",a,i);
+}
+void Reverse()
+{
+ char a[10];
+ printf("Enter the string which is to be reversed\n");
+ fflush(stdin);
+ gets(a);
+ printf("Original String is %s\n",a);
+ strrev(a);
+ printf("Reversed String is %s\n",a);
+}
+void Comparision()
+{
+ int i;
+ char a[10],b[10];
+ printf("Enter the strings to be compared\n");
+ fflush(stdin);
+ gets(a);
+ gets(b);
+ i=strcmp(a,b);
+ if(i==0)
+	printf("Strings A i.e. %s and B i.e. %s are Equal\n",a,b);
+ else if(i>0)
+	printf("String A i.e. %s is greater than String B i.e. %s",a,b);
+ else
+	printf("String B i.e. %s is greater than String A i.e. %s",b,a);
+}
+void Copying()
+{
+ char a[10],b[10];
+ printf("Enter the string which is to be copied\n");
+ fflush(stdin);
+ gets(a);
+ printf("Original String A is %s\n",a);
+ strcpy(b,a);
+ printf("Copied String A to B is %s\n",b);
+}
+void Concatenation()
+{
+ char a[10],b[10];
+ printf("\nEnter first string: ");
+ fflush(stdin);
+ gets(a);
+ printf("\nEnter the string to be concatenated: ");
+ gets(b);
+ printf("\nAfter Concatenating String A %s & B %s is:",a,b);
+ strcat(a,b);
+ printf("%s",a);
+}
+
+
+

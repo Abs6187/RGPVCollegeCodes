@@ -1,0 +1,139 @@
+/* WAP to perform the following operations inMatrix:-
+1. Addition	2.Subtraction	3.Multiplication	4.Transpose
+*/
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+int m,n;
+int a[3][3],b[3][3];
+void display(int c[3][3],char y[10]);
+void addition(int a[3][3],int b[3][3]);
+void subtraction(int a[3][3],int b[3][3]);
+void multiplication(int a[3][3],int b[3][3]);
+void transpose(int [3][3]);
+void main()
+{
+ int i,j,choice;
+ char ch,trans_choice;
+ clrscr();
+ printf("Enter the number of rows and columns of matrix A:\n ");
+ scanf("%d",&m);
+ printf("Enter elements of matrix A row-wise:\n");
+ for(i=0;i<m;i++)
+ {
+	for(j=0;j<m;j++)
+	{
+	printf("Element at a[%d][%d]\t",i,j);
+	scanf("%d",&a[i][j]);
+	}
+ }
+ printf("Enter the number of rows and columns of matrix B:\n ");
+ scanf("%d",&n);
+ printf("Enter elements of matrix B row-wise:\n");
+ for(i=0;i<n;i++)
+ {
+	for(j=0;j<n;j++)
+	{
+	printf("Element at b[%d][%d]\t",i,j);
+	scanf("%d",&b[i][j]);
+	}
+ }
+ display(a,"A");
+ display(b,"B");
+ do
+ {
+  printf("\n Enter 1 for Matrix Addition\nEnter 2 for Matrix Subtraction\nEnter 3 for Matrix Multiplication\nEnter 4 for Matrix Transpose\n");
+  scanf("%d",&choice);
+  switch(choice)
+  {
+   case 1:
+	addition(a,b);
+	break;
+   case 2:
+	subtraction(a,b);
+	break;
+   case 3:
+	multiplication(a,b);
+	break;
+   case 4:
+	printf("\nEnter the matriz to be transposed\n");
+	fflush(stdin);
+	scanf("%c",&trans_choice);
+	if(trans_choice=='a'||trans_choice=='A')
+	transpose(a);
+	else
+	transpose(b);
+	break;
+   default:
+	printf("\nWrong Choice");
+	break;
+   }
+   printf("Do you want to continue, press(Y/N)");
+   fflush(stdin);
+   scanf("%c",&ch);
+   }while(ch=='Y'||ch=='y');
+getch();
+}
+void display(int c[3][3],char y[10])
+{
+ int i,j;
+ printf("Elements of array %s are: \n",y);
+ for(i=0;i<n;i++)
+ {
+	for(j=0;j<n;j++)
+	{
+	printf("%d\t",c[i][j]);
+	}
+	printf("\n");
+ }
+}
+void addition(int a[3][3],int b[3][3])
+{
+ int sum[3][3],i,j;
+ for(i=0;i<n;i++)
+ {
+	for(j=0;j<n;j++)
+	{
+	sum[i][j]=a[i][j]+b[i][j];
+	}
+ }
+ display(sum,"Sum");
+}
+void subtraction(int a[3][3],int b[3][3])
+{
+ int sub[3][3],i,j;
+ for(i=0;i<n;i++)
+ {
+	for(j=0;j<n;j++)
+	{
+	sub[i][j]=a[i][j]-b[i][j];
+	}
+ }
+ display(sub,"Sub");
+}
+void multiplication(int a[3][3],int b[3][3])
+{
+ int mul[3][3],i,j,k;
+ for(i=0;i<n;i++)
+ {
+	for(j=0;j<n;j++)
+	{
+	mul[i][j]=0;
+	for(k=0;k<3;k++)
+	mul[i][j]=mul[i][j]+(a[i][k]*b[k][j]);
+	}
+ }
+ display(mul,"Mul");
+}
+void transpose(int trans[3][3])
+{
+ int t[3][3],i,j;
+ for(i=0;i<n;i++)
+ {
+	for(j=0;j<n;j++)
+	{
+	t[i][j]=trans[j][i];
+	}
+ }
+ display(t,"Transpose");
+}
