@@ -1,11 +1,22 @@
 # CollegeCodes
 This is Created in Order to help the College Students to Get Codes of DSA 3rd Semester Btech RGPV Students to Write their C language Codes in Turbo C.
+COPY PASTE IN TURBO C:
+
 Commands for Turbo C:
 To copy: Select the code using the mouse cursor. Press Ctrl + Ins.
 To paste: Open the file where you want to paste the copied code. Press Shift + Ins.
 To cut: Select the code using the mouse cursor. Press Shift + Del.
+Method: 1
+Select the code using the mouse cursor.
+Press Ctrl + Ins to copy selected code.
+Open the file where you want to paste the copied code.
+Press Shift + Ins to paste the copied code on to the destination.
 
-Syallbus According to RGPV:
+Method: 2 (Recommended)
+If Above Doesn't Work then:(Recommmended)
+Text Form: https://techsupportwhale.com/copy-paste-in-turbo-c-plus-plus/#Method%202:%20Copy-Paste%20Code%20Inside%20The%20Turbo%20C++%20Using%20Menu%20Options
+Video Form: https://www.youtube.com/watch?v=V2cd5LRrorw
+Syllabus According to RGPV:
 
 RAJIV GANDHI PROUDYOGIKI VISHWAVIDYALAYA, BHOPAL
 New Scheme Based On AICTE Flexible Curricula
