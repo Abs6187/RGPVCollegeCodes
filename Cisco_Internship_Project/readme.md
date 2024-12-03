@@ -2,7 +2,7 @@
 
 # Shri Ram Institute of Technnology College Campus Network Analysis and Cyber Security Project
 
-![ss](https://github.com/SubhashishMahapatra/Cisco-VIP-Solution/assets/93381397/11817609-7e60-4f10-b49f-34db6ed25504)
+![ss](https://github.com/Abs6187/RGPVCollegeCodes/blob/main/Cisco_Internship_Project/CyberSecurity_Project.png)
 
 ## Introduction
 
