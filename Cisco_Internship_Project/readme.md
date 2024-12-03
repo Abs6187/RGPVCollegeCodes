@@ -53,12 +53,7 @@ To work on this project, you will need the following:
 
 You can refer this YouTube video for better understanding: [University Networking Project using Cisco Packet Tracer](https://youtu.be/e1cD2KIme-E)
 
-## Implementation:
 
-![ss1](https://github.com/SubhashishMahapatra/Cisco-VIP-Solution/assets/93381397/743a1100-f9f0-43c1-a621-6a296e072e5b)
-
-
-![ss2](https://github.com/SubhashishMahapatra/Cisco-VIP-Solution/assets/93381397/a1dddbe9-ab9d-4721-9d4b-f78cddee5fd6)
 
 
 ## Conclusion
